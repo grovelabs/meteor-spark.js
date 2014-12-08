@@ -1,13 +1,12 @@
 Package.describe({
   name: 'grove:spark.js',
   summary: 'Spark\'s Javascript library on the client',
-  version: '1.0.0',
+  version: '0.2.4',
   git: 'https://github.com/grovelabs/meteor-spark.js'
 });
 
 Package.onUse(function(api) {
-  api.versionsFrom('1.0');
-  api.addFiles('grove:spark.js', 'client');
+  api.addFiles('spark.min.js', 'client');
 });
 
 Package.onTest(function(api) {

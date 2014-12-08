@@ -3,8 +3,6 @@ This Meteor package includes the Spark Javascript library for the browser. The l
 
 Spark is a platform for building web-connected hardware. Read more about it at https://www.spark.io/
 
-## Version
-The core code for this package was downloaded from the recommended [Spark CDN](http://cdn.jsdelivr.net/sparkjs/0.2.3/spark.min.js) and then de-minified. It uses Spark.js version 2.3
 
 ## Installation
 ````
@@ -13,7 +11,7 @@ $ meteor add grove:spark.js
 This will expose the `spark` variable to global scope in the browser
 
 ## Usage
-Before using the library, you need to login with your Spark Cloud credentials. This is as described [in their docs](http://docs.spark.io/javascript/#getting-started-logging-in), just put into a `Meteor.startup` call. By doing it on startup you don't have to use a promise, i.e. `spark.on('login', function(...`
+Before using the library, you need to login with your Spark Cloud credentials. This is as described [in their docs](http://docs.spark.io/javascript/#getting-started-logging-in), just put into a `Meteor.startup` function. By doing it on startup you don't have to use a promise. You can also setup a handler with `spark.on('login', function(err, body) {...} ) `
 
 ### Logging in with an access token
 
