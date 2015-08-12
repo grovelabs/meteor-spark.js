@@ -27,6 +27,7 @@ Meteor.startup(function(){
 
 ```
 
+Note that if you want to use this on the client, you'll need to provide the client with login information. Do so at your own risk, or figure out how to use access tokens.
 
 # Spark
 This Meteor package includes the Spark Javascript library for the browser. The library provides abstractions for interacting with the Spark REST API. If you're interested in using Spark on the server, you want to use [grove:spark](https://github.com/grovelabs/meteor-spark-npm)
