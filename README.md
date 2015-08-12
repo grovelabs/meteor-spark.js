@@ -1,3 +1,33 @@
+# Deprecated!
+This package has been deprecated in favor of using the NPM dependency. Note that currently you can't use a NPM directly in an app; that dependency has to be expressed in a Meteor package that in turn your application uses. You can then expose the `Spark` object via `package.js`, and use it as desired. Examples:
+
+```javascript
+// in package.js of your package:
+Npm.depends({
+  spark: '0.5.9',
+});
+
+api.export([
+  'Spark',
+], 'server');
+
+// in your application, ex. server.js:
+Meteor.startup(function(){
+  Spark.login({
+    username: process.env.SPARK_USERNAME,
+    password: process.env.SPARK_PASSWORD
+  })
+  .then( function(token) {
+    console.log('Logged into Spark:', token);
+  })
+  .catch( function(err) {
+    console.error('Login to Spark failed:', err);
+  });
+});
+
+```
+
+
 # Spark
 This Meteor package includes the Spark Javascript library for the browser. The library provides abstractions for interacting with the Spark REST API. If you're interested in using Spark on the server, you want to use [grove:spark](https://github.com/grovelabs/meteor-spark-npm)
 
