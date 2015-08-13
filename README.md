@@ -29,7 +29,7 @@ Spark = require('spark');
 ```
 
 ```javascript
-// server/main.js
+// client/main.js
 Meteor.startup(function(){
   Spark.login({
     username: process.env.SPARK_USERNAME,
